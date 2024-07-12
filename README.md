@@ -46,6 +46,9 @@ Cart items are stored locally on the device using AsyncStorage. The following me
 ![Home Screen3](assets/HomeScreen-Shot3.jpg)
 ![Home Screen4](assets/HomeScreen-Shot4.jpg)
 
+### Drawer Menu
+![Drawer](assets/Drawer.jpg)
+
 ### Product Detail Screen
 ![Product Detail Screen](assets/ProductDetail-Shot.jpg)
 ![Product Detail Screen](assets/ProductDetail-Shot2.jpg)
