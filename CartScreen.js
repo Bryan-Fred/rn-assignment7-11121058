@@ -24,7 +24,20 @@ const CartScreen = ({ navigation }) => {
     }
   };
 
+  useEffect(() => {
+    const getCartItems = async () => {
+      try {
+        const cart = await AsyncStorage.getItem("cart");
+        if (cart) {
+          setCart(JSON.parse(cart));
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
+    getCartItems();
+  }, []);
 
   return (
     <View style={styles.container}>
