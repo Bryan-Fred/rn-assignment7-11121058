@@ -48,6 +48,7 @@ const ProductDetailScreen = ({ route }) => {
         <Image source={{ uri: product.image }} style={styles.image} />
         <View style={styles.productInfo}>
           <Text style={styles.name}>{product.title}</Text>
+          <Icon style={styles.export} name="upload" size={20} color="#555"/>
           <Text style={styles.description}>
             {product.description}
           </Text>
@@ -140,11 +141,17 @@ const styles = StyleSheet.create({
   },
   productInfo: {
     width: "100%",
+    display: 'relative',
   },
   name: {
     marginTop: 10,
     fontSize: 24,
     fontWeight: "bold",
+  },
+  export:{
+    position: 'absolute',
+    right: 30,
+    top: 15,
   },
   description: {
     fontSize: 16,
