@@ -21,7 +21,18 @@ const HomeScreen = ({ navigation }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => {
+        setProducts(json);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
+  }, []);
 
   const addToCart = async (product) => {
     try {
